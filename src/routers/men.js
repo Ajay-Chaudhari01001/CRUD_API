@@ -76,7 +76,7 @@ router.delete("/mens/:id", async (req, res) => {
         const _id = req.params.id;
 
         // Find and delete a specific 'MensRanking' record by ID.
-        const getMen = await MensRanking.findByIdAndUpdate(_id);
+        const getMen = await MensRanking.findByIdAndDelete(_id);
 
         // Send a response, possibly indicating the success of the deletion.
         res.status(201).send(getMen);
